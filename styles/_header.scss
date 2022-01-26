@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    position: relative;
+}
+header .header-list{
+    display:flex;
+    list-style: none;
+    align-items: center;
+}
+header .header-list li{
+    margin:0 1.5rem;
+}
+.header-image{
+    width: 4rem;
+}
+
+.btn{
+    transition: all .2s;
+    cursor: pointer;
+    &:hover{
+        transform:  scale(1.5);
+    }
+    &:active{
+        transform: scaleZ(1.1) ;
+    }
+}
+

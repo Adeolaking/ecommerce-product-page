@@ -1,0 +1,29 @@
+.product{
+
+   
+    &_image-cont{
+        position: relative;
+        overflow: hidden;
+        height: 45rem;
+        #scrollLeft{
+            left: 2rem;
+        }
+        #scrollRight{
+            right:2rem;
+        }
+    }
+    
+    &__scroll-btn{
+        position: absolute; 
+        // transform: translateY(22rem);
+        top: 20rem;
+        background-color: var(--White);
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
