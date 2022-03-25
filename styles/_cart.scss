@@ -11,7 +11,7 @@
     border-radius: .9rem;
     transform: translate(-50%, 50%);
     overflow: hidden;
-     display: none;
+    //  display: none;
     box-shadow: 1.4rem 2rem 4rem  #00000060;
     margin-bottom: 1rem;
 
@@ -29,7 +29,7 @@
     }
    
     &_items{
-        display: none;
+        // display: none;
         list-style: none;
         .cart_item{
             display: flex;
@@ -51,6 +51,17 @@
 
                 img{
                     width:100%;
+                }
+            }
+
+            &__delete-btn{
+                transition: all .2s;
+                cursor: pointer;
+                &:hover{
+                    transform:  scale(1.5);
+                }
+                &:active{
+                    transform: scaleZ(1.1) ;
                 }
             }
         }

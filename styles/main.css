@@ -66,11 +66,13 @@ button svg {
   position: fixed;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: 120;
-  display: none;
+  width: 0;
 }
 
 .navigation-background {
@@ -275,7 +277,6 @@ header .header-list li {
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   overflow: hidden;
-  display: none;
   -webkit-box-shadow: 1.4rem 2rem 4rem  #00000060;
           box-shadow: 1.4rem 2rem 4rem  #00000060;
   margin-bottom: 1rem;
@@ -295,7 +296,6 @@ header .header-list li {
 }
 
 .cart_items {
-  display: none;
   list-style: none;
 }
 
@@ -327,5 +327,21 @@ header .header-list li {
 
 .cart_items .cart_item__image-cont img {
   width: 100%;
+}
+
+.cart_items .cart_item__delete-btn {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  cursor: pointer;
+}
+
+.cart_items .cart_item__delete-btn:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.cart_items .cart_item__delete-btn:active {
+  -webkit-transform: scaleZ(1.1);
+          transform: scaleZ(1.1);
 }
 /*# sourceMappingURL=main.css.map */

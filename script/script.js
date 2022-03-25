@@ -7,9 +7,11 @@ const openNavigation = document.getElementById('openNav')
 const navigation =document.querySelector('.navigation')
 
 openNavigation.addEventListener('click', ()=>{
-    navigation.classList.add('display')
-    navigation.classList.remove('display_none')
+    navigation.classList.toggle('display')
+    // navigation.classList.remove('display_none')
  })
+
+
  const btnsCloseNavigation= [...btnCloseNavigation];
  btnsCloseNavigation.forEach(element => {
      element.addEventListener('click', ()=>{
@@ -35,36 +37,28 @@ const btnScrollRight = document.getElementById('scrollRight');
 const btnScrollLeft = document.getElementById('scrollLeft');
 
 let currentImage = 0;
-const increment = function (images){
-    console.log("Gbass Gboss")
+const increment = ()=>{
     console.log(currentImage)
-
-    if (currentImage < images.length && !(currentImage >= images.length) ){
-        currentImage = currentImage || 1
-        productImageDisplay.src = images[currentImage]
-        currentImage +=1
-        console.log(currentImage)
-    }else {
-        currentImage = 0
-        productImageDisplay.src = images[currentImage]
-        console.log(currentImage)
-    }
-    console.log(currentImage)
-
+    productImageDisplay.src = images[currentImage];
+    if(currentImage >= images.length -1) currentImage =0; 
+    else currentImage ++;
+    
 }
   
 
-const decrement = function (images){
-    
-//  ;
-//  console.log(currentImage)
+const decrement = function (){
+     
 
-if(currentImage != 0){
-     productImageDisplay.src = images[currentImage]
-   currentImage -=1
-}else{
+
+if(currentImage === 0){
+    console.log(`******** decrement if ${currentImage}`)
+    currentImage = images.length - 1;
+    console.log(`******** decrement if ${currentImage}`)
+     productImageDisplay.src =images[currentImage]
+}else if(currentImage<=images.length - 1){
+    console.log(`******** decrement esle if ${currentImage}`)
+    currentImage--;
     productImageDisplay.src = images[currentImage]
-    currentImage= currentImage || (images.length - 1)
 }
    
 }
@@ -77,4 +71,15 @@ btnScrollLeft.addEventListener('click', ()=> decrement(images) )
 
 
 
+
+// if (currentImage < images.length && !(currentImage >= images.length) ){
+//     currentImage = currentImage || 1
+//     productImageDisplay.src = images[currentImage]
+//     currentImage +=1
+//     console.log(currentImage)
+// }else {
+//     currentImage = 0
+//     productImageDisplay.src = images[currentImage]
+//     console.log(currentImage)
+// }
 
